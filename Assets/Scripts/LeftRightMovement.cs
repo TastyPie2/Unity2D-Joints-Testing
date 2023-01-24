@@ -14,6 +14,6 @@ public class LeftRightMovement : MonoBehaviour {
     private void Update() {
         float horizontalInput = Input.GetAxis(HorizontalInputAxisString);
         Vector2 movementDirection = Vector2.right * horizontalInput;
-        _rigidbody2D.AddForce(movementDirection * (speed * Time.deltaTime)); // Reordered for performance
+        _rigidbody2D.AddForce(movementDirection * (speed * Time.deltaTime), ForceMode2D.Impulse); // Reordered for performance
     }
 }
